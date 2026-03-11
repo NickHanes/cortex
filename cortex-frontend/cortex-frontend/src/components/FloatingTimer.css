@@ -1,0 +1,88 @@
+.ft-wrap {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #13131f;
+    border-radius: 16px;
+    padding: 13px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+    min-width: 116px;
+    transition: box-shadow 0.3s;
+}
+
+.ft-study {
+    border: 1px solid #6c63ff55;
+    box-shadow: 0 4px 24px #6c63ff33;
+}
+
+.ft-break {
+    border: 1px solid #2ecc7155;
+    box-shadow: 0 4px 24px #2ecc7133;
+}
+
+.ft-mode {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.ft-study .ft-mode { color: #a78bfa; }
+.ft-break .ft-mode { color: #2ecc71; }
+
+.ft-time {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #f0f0ff;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.ft-controls {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ft-play {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: white;
+}
+
+.ft-study .ft-play { background: #6c63ff; }
+.ft-study .ft-play:hover { background: #7c73ff; }
+.ft-break .ft-play { background: #2ecc71; color: #0a1f12; }
+.ft-break .ft-play:hover { background: #3ddb80; }
+
+.ft-close {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: 1px solid #252538;
+    background: transparent;
+    color: #555570;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.ft-close:hover {
+    border-color: #e74c3c55;
+    background: #2e0f0f;
+    color: #e74c3c;
+}

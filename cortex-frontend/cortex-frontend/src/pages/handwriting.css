@@ -1,0 +1,288 @@
+/* ── Container ─────────────────────────────────────────── */
+.up-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ── Header ────────────────────────────────────────────── */
+.up-header h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: #f0f0ff;
+    letter-spacing: -0.02em;
+}
+
+.up-subtitle {
+    color: #9090b0;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ── Drop zone ─────────────────────────────────────────── */
+.up-dropzone {
+    border: 2px dashed #252538;
+    border-radius: 16px;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #0d0d18;
+}
+
+.up-dropzone:hover {
+    border-color: #6c63ff55;
+    background: #13101f;
+}
+
+.up-dropzone.dragover {
+    border-color: #6c63ff;
+    background: #16123a;
+    box-shadow: 0 0 0 4px #6c63ff11;
+}
+
+.up-dropzone.has-files {
+    padding: 28px 32px;
+    border-style: solid;
+    border-color: #252538;
+}
+
+.up-dropzone-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #13131f;
+    border: 1px solid #252538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c63ff;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+}
+
+.up-dropzone:hover .up-dropzone-icon,
+.up-dropzone.dragover .up-dropzone-icon {
+    background: #1e1a3a;
+    border-color: #6c63ff44;
+    box-shadow: 0 0 20px #6c63ff22;
+}
+
+.up-dropzone-title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #c0c0d8;
+}
+
+.up-dropzone-hint {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #555570;
+}
+
+/* ── File list ─────────────────────────────────────────── */
+.up-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.up-file-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #13131f;
+    border: 1px solid #252538;
+    border-radius: 10px;
+    transition: border-color 0.15s;
+}
+
+.up-file-row:hover { border-color: #2e2e48; }
+
+.up-file-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    background: #1e1a3a;
+    border: 1px solid #6c63ff33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a78bfa;
+    flex-shrink: 0;
+}
+
+.up-file-info {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    min-width: 0;
+}
+
+.up-file-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #c0c0d8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.up-file-size {
+    font-size: 0.75rem;
+    color: #555570;
+    flex-shrink: 0;
+}
+
+.up-file-remove {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: #555570;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+}
+
+.up-file-remove:hover {
+    background: #2e0f0f;
+    color: #e74c3c;
+}
+
+/* ── Actions ───────────────────────────────────────────── */
+.up-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.up-clear-btn {
+    padding: 10px 18px;
+    background: transparent;
+    border: 1px solid #252538;
+    border-radius: 10px;
+    color: #9090b0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.up-clear-btn:hover {
+    border-color: #2e2e48;
+    color: #c0c0d8;
+}
+
+.up-upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 12px #6c63ff33;
+}
+
+.up-upload-btn:hover:not(:disabled) {
+    background: #7c73ff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 18px #6c63ff44;
+}
+
+.up-upload-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Spinner */
+.up-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Result ────────────────────────────────────────────── */
+.up-result {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeUp 0.3s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.up-result-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #2ecc71;
+}
+
+.up-result-card {
+    background: #13131f;
+    border: 1px solid #252538;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.up-result-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.up-result-card p {
+    margin: 0;
+    color: #c0c0d8;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.up-result-content {
+    white-space: pre-wrap;
+    font-family: inherit;
+}

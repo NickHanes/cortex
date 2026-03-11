@@ -1,0 +1,23 @@
+.topbar {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 24px;
+    background-color: #0f1115;
+    border-bottom: 1px solid #1c1f26;
+}
+
+.topbar button {
+    background-color: #1f2937;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.topbar button:hover {
+    background-color: #374151;
+}
