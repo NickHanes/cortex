@@ -31,8 +31,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             FilterChain filterChain)
             throws ServletException, IOException {
 
-        System.out.println("JWT FILTER HIT");
-
         String path = request.getServletPath();
 
         if (path.startsWith("/auth/")) {
@@ -51,11 +49,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         try {
 
-            System.out.println("Token: " + token);
-
             String username = jwtService.extractUsername(token);
-
-            System.out.println("Username: " + username);
 
             if (username != null &&
                     SecurityContextHolder.getContext().getAuthentication() == null) {

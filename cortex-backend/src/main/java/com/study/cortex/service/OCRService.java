@@ -106,8 +106,6 @@ public class OCRService {
         HttpResponse<String> response = httpClient.send(request,
                 HttpResponse.BodyHandlers.ofString());
 
-        System.out.println("GROQ RESPONSE: " + response.body());
-
         JsonNode json = mapper.readTree(response.body());
 
         if (json.has("error")) {
